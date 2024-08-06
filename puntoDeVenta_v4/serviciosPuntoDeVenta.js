@@ -1,5 +1,6 @@
 calcularValorDescuento = function(monto,porcentajeDescuento){
-    return valorDescuento = (100 / porcentajeDescuento) * monto
+    let valorDescuento = (porcentajeDescuento * monto) / 100
+    return valorDescuento.toFixed(1)
 }
 
 calcularIva= function(monto){
