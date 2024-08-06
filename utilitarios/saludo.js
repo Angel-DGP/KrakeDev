@@ -1,8 +1,3 @@
-recuperartxt= function(idCMP){
-let cmp = document.getElementById(idCMP)
-let ving = cmp.value
-return ving
-}
 saludar = function(){
     let name = recuperartxt("txtname")
     let lname= recuperartxt("txtlname")
@@ -13,7 +8,14 @@ saludar = function(){
     let msgWEL= "Bienvenido "+ name+" " + lname
     mostrartxt("lblresul",msgWEL)
     mostrarimg("idimg","./img/saludo.gif")
+    mostrartxtbox("txtname","")
 }
+
+recuperartxt= function(idCMP){
+    let cmp = document.getElementById(idCMP)
+    let ving = cmp.value
+    return ving
+    }
 
 converInt = function(idcmp){
     let vSTR = recuperartxt(idcmp)
@@ -36,3 +38,8 @@ mostrarimg = function(idcmp,rimg){
     let imgcmp = document.getElementById(idcmp)
     imgcmp.src= rimg
 }
+
+mostrartxtbox = function(idcmp,msg){
+    let txtcmp= document.getElementById(idcmp)
+    txtcmp.value= msg 
+} 
