@@ -5,7 +5,6 @@ return ving
 }
 saludar = function(){
     let name = recuperartxt("txtname")
-    console.log(name)
     let lname= recuperartxt("txtlname")
-    console.log(lname)
+    console.log("Hola "+ name+" " + lname)
 }
