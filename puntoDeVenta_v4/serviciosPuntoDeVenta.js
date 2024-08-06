@@ -1,17 +1,19 @@
 calcularValorDescuento = function(monto,porcentajeDescuento){
     let valorDescuento = (porcentajeDescuento * monto) / 100
-    return valorDescuento.toFixed(1)
+    return valorDescuento
 }
 
 calcularIva= function(monto){
-    return iva = (monto/100) * 12
+    let iva = (monto/100) * 12
+    return iva
 }
 
 calcularSubtotal = function(precio, cantidad){
-    return subtotal = precio * cantidad
+    let subtotal = precio * cantidad
+    return subtotal
 }
 
 calcularTotal = function(subtotal,descuento,iva){
-    total = subtotal - descuento + iva
-
+    let total = subtotal - descuento + iva
+    return total.toFixed(2)
 }
