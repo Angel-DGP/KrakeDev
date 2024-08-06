@@ -9,6 +9,10 @@ saludar = function(){
     let edad = converInt("txtdad")
     let estatura = converfloat("txtesta")
     console.log("Hola "+ name+" " + lname+ ", tu edad es: " + edad + " y estatura: " + estatura)
+
+    let msgWEL= "Bienvenido "+ name+" " + lname
+    mostrartxt("lblresul",msgWEL)
+    mostrarimg("idimg","./img/saludo.gif")
 }
 
 converInt = function(idcmp){
@@ -21,4 +25,14 @@ converfloat = function(idcmp){
     let vSTR = recuperartxt(idcmp)
     let vFloat = parseFloat(vSTR)
     return vFloat
+}
+
+mostrartxt = function(idcmp,msg){
+    let txtcmp= document.getElementById(idcmp)
+    txtcmp.innerText= msg   
+}
+
+mostrarimg = function(idcmp,rimg){
+    let imgcmp = document.getElementById(idcmp)
+    imgcmp.src= rimg
 }
