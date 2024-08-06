@@ -16,7 +16,7 @@ recuperartxt= function(idCMP){
     let ving = cmp.value
     return ving
     }
-
+    
 converInt = function(idcmp){
     let vSTR = recuperartxt(idcmp)
     let vINT = parseInt(vSTR)
