@@ -5,4 +5,11 @@ calcularPromedioNotas = function(){
     promedio = calcularPromedio(nota1,nota2,nota3)
     mostrartxt("lblprom", promedio)
     console.log(promedio)
+    if (promedio>7){
+        mostrarimg("idimg","./img/exito.gif")
+    }
+    else{
+        mostrarimg("idimg","./img/fracaso.gif")
+    }
+    
 }
