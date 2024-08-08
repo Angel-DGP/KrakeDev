@@ -1,17 +1,7 @@
-let ingresoAnual = 5000.34
-let edad = 55
-let ingresos = 400.23
-let egresos = 120.54
-let precio = 5.4
-let cantidad = 20
-let nivelColesterol = 134.3
-let clave = "sdiiW32$23"
-let caracter = "A"
-let notaMatematica = 87.32
-let notaFisica = 48.90
-let notaGeometria = 99.02
+
 
 calcularTasaInteres = function(ingresoAnual){
+    ingresoAnual = parseFloat(ingresoAnual)
     let tasa = 0
     if(ingresoAnual<300000){
         tasa = ingresoAnual * (16/100)
@@ -34,6 +24,9 @@ calcularTasaInteres = function(ingresoAnual){
 }
 
 calcularCapacidadPago = function(edad,ingresos,egresos){
+    edad = parseInt(edad)
+    ingresos = parseFloat(ingresos)
+    egresos = parseFloat(egresos)
     if (edad>50){
         cuota = (ingresos * 0.30) - egresos
     }
@@ -45,6 +38,8 @@ calcularCapacidadPago = function(edad,ingresos,egresos){
 }
 
 calcularDescuento = function(precio, cantidad){
+    precio = parseFloat(precio)
+    cantidad = parseInt(cantidad)
     if (cantidad>=3 && cantidad <= 5){
         descuento = (precio * cantidad) - ((2/100) * (precio * cantidad)) 
     }
@@ -62,6 +57,7 @@ calcularDescuento = function(precio, cantidad){
 }
 
 determinarColesterolLDL = function(nivelColesterol){
+    nivelColesterol = parseFloat(nivelColesterol)
     if (nivelColesterol<100){
         ldlSTR = "Óptimo (lo mejor para su salud)"
     }
@@ -124,6 +120,9 @@ esDigito = function(caracter){
 }
 
 darPermiso = function(notaMatematica,notaFisica,notaGeometria){
+    notaMatematica = parseFloat(notaMatematica)
+    notaFisica = parseFloat(notaFisica)
+    notaGeometria = parseFloat(notaGeometria)
     if (notaMatematica>90 || notaFisica>90 || notaGeometria >90){
         return true
     }
@@ -134,6 +133,9 @@ darPermiso = function(notaMatematica,notaFisica,notaGeometria){
 }
 
 otorgarPermiso = function(notaMatematica,notaFisica,notaGeometria){
+    notaMatematica = parseFloat(notaMatematica)
+    notaFisica = parseFloat(notaFisica)
+    notaGeometria = parseFloat(notaGeometria)
     if (notaMatematica>90 || notaFisica>90 && notaGeometria >80){
         return true
     }
@@ -143,6 +145,9 @@ otorgarPermiso = function(notaMatematica,notaFisica,notaGeometria){
 }
 
 dejarSalir = function(notaMatematica,notaFisica,notaGeometria){
+    notaMatematica = parseFloat(notaMatematica)
+    notaFisica = parseFloat(notaFisica)
+    notaGeometria = parseFloat(notaGeometria)
     if (notaMatematica>90 || notaFisica>90 || notaGeometria >90 && notaFisica>notaMatematica){
         return true
     }
