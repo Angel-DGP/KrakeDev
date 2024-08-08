@@ -1,3 +1,16 @@
+let ingresoAnual = 5000.34
+let edad = 55
+let ingresos = 400.23
+let egresos = 120.54
+let precio = 5.4
+let cantidad = 20
+let nivelColesterol = 134.3
+let clave = "sdiiW32$23"
+let caracter = "A"
+let notaMatematica = 87.32
+let notaFisica = 48.90
+let notaGeometria = 99.02
+
 calcularTasaInteres = function(ingresoAnual){
     let tasa = 0
     if(ingresoAnual<300000){
