@@ -131,6 +131,7 @@ body{
       color:red;
       font-style: italic;
       font-size: 16px;
+      text-align: center;
   }
   .contenido{
     display: flex;
@@ -139,3 +140,16 @@ body{
       justify-content: center;
 
   }
+  .errorB{
+    color:red;
+      font-style: italic;
+      font-size: 20px;
+      text-align: center;
+  }
+  .areaErrores{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

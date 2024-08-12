@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="placas.js"></script>
+    <script src="serviciosPlacas.js"></script>
+    <script src="utitlitariosCadenas.js"></script>
+    <script src="utilitarios.js"></script>
+    <link rel="stylesheet" href="placas.css">
+</head>
+<body>
+    <div class="principal">
+        <div class="logoEscuela">
+            <img src="img/logoKrakeDev.png" width="80%">
+        </div>
+        <div class="contenido">
+            <div class="ingresoDatos">
+                <div class="tituloCampo">Ingrese la placa</div>
+                <div>
+                    <input type="text" id="txtPlaca" class="cajaTexto">
+                </div>
+            </div>
+            <div class="botones">
+                <input type="button" value="Validar" id="btnValidar" class="estiloBoton" onclick="validarPlaca()">
+            </div>
+        </div>
+        <div class="areaResultado">
+            <div class="resultado">
+                <div id="lblPlaca?" class="resultado"></div>
+            </div>
+
+            <div class="resultado">
+                <div id="lblProvi" class="resultado"></div>
+            </div>
+
+            <div class="resultado">
+                <div id="lblTV" class="resultado"></div>
+            </div>
+
+            <div class="resultado">
+                <div id="lblPYP" class="resultado"></div>
+            </div>
+        </div>
+        <div class="areaErrores">
+            <div class="resultado">
+                <div id="lblErrores" class="error"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
