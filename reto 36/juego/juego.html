@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="juego.js"></script>
+    <script src="serviciosJuego.js"></script>
+    <script src="utilitarios.js"></script>
+    <link rel="stylesheet" href="juego.css">
+</head>
+<body>
+    <div class="principal">
+        <div class="logoEscuela">
+            <img src="img/logoKrakeDev.png" width="80%">
+        </div>
+
+        <div class="contenido">
+            <div class="ingresoDatos">
+                <div class="tituloCampo">PIEDRA PAPEL O TIJERAS</div>
+                <div>
+                    <img src="img/PAPEL.png", width="40px" onclick="jugar('PAPEL')" class="imgJ">
+                    <img src="img/PIEDRA.png", width="40px" onclick="jugar('PIEDRA')" class="imgJ">
+                    <img src="img/TIJERAS.png", width="40px" onclick="jugar('TIJERAS')" class="imgT">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="areaResultado">
+            <div id="lblpuntosU">PUNTOS DE USUARIO: </div>
+            <div id="lblpuntosC">PUNTOS DE COMPUTADOR: </div>
+            <br>
+            <div id="lblGanador" style="font-size: 30px;"></div>
+            <br>
+            <div id="lblResumen" style="font-size:40px;"></div> 
+            <input type="button" value="NUEVA PARTIDA" class="estiloBoton" onclick="limpiar()">
+        </div>
+
+        <div class="eleccionComputadora">
+            <div id="lblpc"></div>
+            <img id="imgPC" src="" width="30%" class="imgPC">
+            
+        </div>
+
+
+    </div>
+</body>
+</html>
