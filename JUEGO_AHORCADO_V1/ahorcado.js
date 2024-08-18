@@ -53,13 +53,15 @@ validar = function(letra){
 
 ingresarLetra = function(){
     intentos+=1
-    letraU = recuperarTexto("txtLetra")
-    if(esMayuscula(letraU)==true){
-        validar(letraU)
-        if(coincidencias==5){alert("HAS GANADO")}
-        if(intentos==10){alert("HA PERDIDO")}
+    if(intentos<=10 && coincidencias<=5){
+        letraU = recuperarTexto("txtLetra")
+        if(esMayuscula(letraU)==true){
+            validar(letraU)
+            if(coincidencias==5){mostrarImagen("ahorcadoImagen","ganador.gif")}
+            if(intentos==10){mostrarImagen("ahorcadoImagen","gameOver.gif")}
+        }
+        else{alert("SOLO SE ACEPTAN MAYUSCULAS")}
     }
-    else{alert("SOLO SE ACEPTAN MAYUSCULAS")}
 }
 
 mostrarAhorcado = function(){
