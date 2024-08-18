@@ -36,8 +36,14 @@ validar = function(letra){
         if(letraIterada==letra){
             letrasEncontradas+=1
             mostrarLetra(letra,i)
-        
         }
     }
 }
 
+ingresarLetra = function(){
+    letraU = recuperarTexto("txtLetra")
+    if(esMayuscula(letraU)==true){
+        validar(letraU)
+    }
+    else{alert("SOLO SE ACEPTAN MAYUSCULAS")}
+}
