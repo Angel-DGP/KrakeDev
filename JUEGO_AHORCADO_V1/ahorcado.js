@@ -75,3 +75,19 @@ mostrarAhorcado = function(){
     if(errores==8){mostrarImagen("ahorcadoImagen","Ahorcado_08.png")}
     if(errores==9){mostrarImagen("ahorcadoImagen","Ahorcado_09.png")}
 }
+
+limpiar = function(){
+    palabraSecreta = ""
+    lerasEncontradas = 0
+    intentos = 0
+    coincidencias = 0
+    errores = 0
+    mostrarTexto("div0","")
+    mostrarTexto("div1","")
+    mostrarTexto("div2","")
+    mostrarTexto("div3","")
+    mostrarTexto("div4","")
+    mostrarImagen("ahorcadoImagen","")
+    mostrarTextoEnCaja("txtSecreta","")
+    mostrarTextoEnCaja("txtLetra","")
+}
