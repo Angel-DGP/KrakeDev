@@ -1,7 +1,10 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
-//La paciencia no es mi virtud, pero la logica si
+//La paciencia no es mi virtud, pero la logica si psdt: i guess
 let palabraSecreta
 let letrasEncontradas
+let intentos = 0
+let coincidencias = 0
+let errores = 0
 
 esMayuscula = function(caracter){
     codigo = caracter.charCodeAt(0)
@@ -31,19 +34,28 @@ mostrarLetra = function(letra,posicion){
 }
 
 validar = function(letra){
+    let atino = false
     for(let i = 0; i<=palabraSecreta.length-1;i++){
         letraIterada = palabraSecreta.charAt(i)
         if(letraIterada==letra){
             letrasEncontradas+=1
             mostrarLetra(letra,i)
+            coincidencias+=1
+            atino=true
         }
     }
+    if(atino==false){
+        alert("LA LETRA NO ES PARTE DE LA PALABRA")
+        errores+=1}
 }
 
 ingresarLetra = function(){
+    intentos+=1
     letraU = recuperarTexto("txtLetra")
     if(esMayuscula(letraU)==true){
         validar(letraU)
+        if(coincidencias==5){alert("HAS GANADO")}
+        if(intentos==10){alert("HA PERDIDO")}
     }
     else{alert("SOLO SE ACEPTAN MAYUSCULAS")}
 }
