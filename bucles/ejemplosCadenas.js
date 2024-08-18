@@ -37,3 +37,31 @@ recorrerCadenaInvertida = function(cadena){
     }
     mostrartxt("lblCInvertida",cInvertida)
 }
+
+buscarLetra = function(cadena,letra){
+    let letraIterada
+    let existeLetra = false
+    for (let i=0; i<=cadena.length-1;i++){
+        letraIterada = cadena.charAt(i)
+        if (letraIterada==letra){
+            existeLetra = true
+        }
+    }
+    if(existeLetra==true){
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+contarMayusculas = function(cadena){
+    let letra
+    let contadorMayusculas
+    for(let i=0; i<=cadena.length; i++){
+        letra = cadena.charAt(i)
+        if(esMayuscula(letra)==true){
+            contadorMayusculas = contadorMayusculas + 1
+        }
+    }
+}

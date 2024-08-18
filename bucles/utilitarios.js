@@ -30,3 +30,13 @@ mostrartxtbox = function(idcmp,msg){
     let txtcmp= document.getElementById(idcmp)
     txtcmp.value= msg 
 } 
+esMayuscula = function(caracter){
+    cascii = caracter.charCodeAt(0)
+    if (cascii>=65 && cascii<= 90 ){
+        return true
+    }
+    else {
+        return false
+    } 
+
+}
