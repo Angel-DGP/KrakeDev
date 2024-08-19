@@ -22,3 +22,19 @@ mostrarOpcionResumen = function(){
     mostrarComponente("divResumen")
 }
 
+mostrarEmpleados = function(){
+    let cmpTabla = document.getElementById("tablaEmpleados")
+    let contenidoTabla = "<table><tr>"+"<th>CEDULA</th>"+
+    "<th>NOMBRE</th>"+"<th>EDAD</th>"+"</tr>"
+    let elementoEmpleados
+    for (let i=0; i<empleados.length;i++){
+        elementoEmpleados = empleados[i]
+        contenidoTabla+= 
+        "<tr><td>"+elementoEmpleados.cedula+"</td>"+
+        "<td>"+elementoEmpleados.nombre+"</td>"+
+        "<td>"+elementoEmpleados.apellido+"</td>"
+        "<td>"+elementoEmpleados.sueldo+"</td></tr>"
+    }
+    contenidoTabla+="</table>"
+    cmpTabla.innerHTML=contenidoTabla
+}
