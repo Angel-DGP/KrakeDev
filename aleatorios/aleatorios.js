@@ -13,3 +13,16 @@ generarAleatorios = function () {
     }
   }
 }
+
+mostrarResultados = function(arregloNumeros){
+    let cmp = document.getElementById("divTabla")
+    let contenidoTabla="<table><tr><th>TABLA</th></tr>"
+    for(let i=0;i<arregloNumeros.length;i++){
+        console.log(arregloNumeros[i])
+        contenidoTabla+="<tr><td>"
+        contenidoTabla+=arregloNumeros[i]
+        contenidoTabla+="</td></tr>"
+    }
+    contenidoTabla+="</table>"
+    cmp.innerHTML=contenidoTabla
+}
