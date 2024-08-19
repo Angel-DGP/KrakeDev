@@ -2,7 +2,7 @@ let frutas = ["PERA","MANZANA","BANANA"]
 probarBusqueda= function(){
     encontrar = buscar(elementoABuscar = recuperarTexto("txtFruta"))
     if(encontrar==null){
-        mostrarTexto("lblResultado","No se encontro la fruta")
+        mostrarTexto("lblResultado","NO SE ENCONTRO LA FRUTA")
     }
     else{
         mostrarTexto("lblResultado","SE ENCONTRO LA FRUTA:" + encontrar)
