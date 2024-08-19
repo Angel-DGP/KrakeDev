@@ -8,6 +8,7 @@ mostrarOpcionEmpleado = function(){
     mostrarComponente("divEmpleado")
     ocultarComponente("divRol")
     ocultarComponente("divResumen")
+    mostrarEmpleados()
 }
 
 mostrarOpcionRol = function(){
