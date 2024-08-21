@@ -234,3 +234,16 @@ ejecutarBusqueda = function(){
         alert("EMPLEADO NO EXISTE")
     }
 }
+
+limpiar = function(){
+    mostrarTextoEnCaja("txtCedula","")
+    mostrarTextoEnCaja("txtNombre","")
+    mostrarTextoEnCaja("txtApellido","")
+    mostrarTextoEnCaja("txtSueldo","")
+    esNuevo = false
+    deshabilitarCajas()
+    mostrarTexto("lblErrorCedula","")
+    mostrarTexto("lblErrorNombre","")
+    mostrarTexto("lblErrorApellido","")
+    mostrarTexto("lblErrorSueldo","")
+}
