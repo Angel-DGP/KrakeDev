@@ -247,3 +247,17 @@ limpiar = function(){
     mostrarTexto("lblErrorApellido","")
     mostrarTexto("lblErrorSueldo","")
 }
+
+buscarPorRol = function(){
+    cedula_empleado = recuperarTexto("txtBusquedaCedulaRol")
+    empleado_buscado = buscarEmpleado(cedula_empleado)
+    if(empleado_buscado!=null & cedula_empleado!=""){
+        mostrarTexto("infoCedula",empleado_buscado.cedula)
+        mostrarTexto("infoNombre",empleado_buscado.nombre + " " + empleado_buscado.apellido)
+        mostrarTexto("infoSueldo",empleado_buscado.sueldo)
+    }
+    else{
+        alert("NO EXISTE EMPLEADO")
+    }
+    
+}
