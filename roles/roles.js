@@ -192,9 +192,16 @@ if(esNuevo==true& errorFGuardar==false){
         alert("EMPLEADO GUARDADO CORRECTAMENTE")
         mostrarEmpleados()
         deshabilitarCajas()
+        esNuevo = false
     }
     else{
         alert("YA EXISTE UN EMPLEADO CON LA CEDULA: " + empleadoNuevo.cedula)
+        empleado_buscado =buscarEmpleado(empleadoNuevo.cedula)
+        empleado_buscado.nombre = empleadoNuevo.nombre
+        empleado_buscado.apellido = empleadoNuevo.apellido
+        empleado_buscado.sueldo = empleadoNuevo.sueldo
+        alert("EMPLEADO MODIFICADO EXISTOSAMENTE")
+        mostrarEmpleados()
     }
 }
 
@@ -206,4 +213,24 @@ deshabilitarCajas = function(){
     deshabilitarComponente("txtApellido")
     deshabilitarComponente("txtSueldo")
     deshabilitarComponente("btnGuardar")
+}
+
+ejecutarBusqueda = function(){
+    cedula_empleado = recuperarTexto("txtBusquedaCedula")
+    se_encontro = buscarEmpleado(cedula_empleado)
+    if(se_encontro!=null & cedula_empleado!=""){
+        habilitarComponente("txtCedula")
+        mostrarTextoEnCaja("txtCedula",se_encontro.cedula)
+        habilitarComponente("txtNombre")
+        mostrarTextoEnCaja("txtNombre",se_encontro.nombre)
+        habilitarComponente("txtApellido")
+        mostrarTextoEnCaja("txtApellido",se_encontro.apellido)
+        habilitarComponente("txtSueldo")
+        mostrarTextoEnCaja("txtSueldo",se_encontro.sueldo)
+        
+        deshabilitarComponente("txtBusquedaCedula")
+    }
+    else{
+        alert("EMPLEADO NO EXISTE")
+    }
 }
