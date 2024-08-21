@@ -261,3 +261,21 @@ buscarPorRol = function(){
     }
     
 }
+
+calcularAporteEmpleado = function(sueldo_empleado){
+    return valorAporte = (9.45 * sueldo_empleado)/100
+}
+
+calcularValorAPagar = function(sueldo_empleado,aporte_iess,descuento_empleado){
+    descuento_a_pagar = (descuento_empleado*sueldo_empleado)/100
+    return valorAPagar = (sueldo_empleado - (aporte_iess + descuento_a_pagar))
+}
+
+calcularRol = function(){
+    let sueldo = recuperarFloatDiv("infoSueldo")
+    let descuento = recuperarTexto("txtDescuentos")
+    let aporte_Empleado_Iess = calcularAporteEmpleado(sueldo)
+    mostrarTexto("infoIESS",aporte_Empleado_Iess)
+    let total_a_pagar = calcularValorAPagar(sueldo,aporte_Empleado_Iess,descuento)
+    mostrarTexto("infoPago",total_a_pagar)
+}
