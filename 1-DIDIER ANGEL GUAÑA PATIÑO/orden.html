@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="utilitarios.js"></script>
+    <script src="orden.js"></script>
+    <link rel="stylesheet" href="orden.css">
+</head>
+<body onload="mostrarTabla()">
+    <div>
+        <h3>INGRESE SU NOMBRE</h3>
+        <input id="txtName" type="text">
+        <div id="lblErrorName" class="error"></div>
+        <h3>INGRESE SU EDAD</h3>
+        <input id="txtAge" type="text">
+        <div id="lblErrorAge" class="error"></div>
+        <input type="button" value="SAVE" class="button" onclick="agregarPersona()">
+        <input type="button" value="ENCONTRAR MAYOR" class="button" onclick="determinarMayor()">
+        <input type="button" value="ENCONTRAR MENOR" class="button" onclick="determinarMenor()">
+    <div>
+        <div>
+            <h2 id="lbltxtMayor"></h2>
+            <div id="lblMayor"></div>
+        </div>
+        <div>
+            <h2 id="lbltxtMenor"></h2>
+            <div id="lblMenor"></div>
+        </div>
+    </div>
+    </div>
+    <div id="tablaPersonas">
+    </div>
+</body>
+</html>
